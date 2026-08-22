@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>Blue House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="sd1.png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div style="display:flex;align-items:center;gap:15px;">
+                <button class="search-toggle-btn" id="searchToggleBtn"><i class="fas fa-search"></i></button>
+                <div class="shop-name" id="goHomeBtn"><i class="fas fa-store"></i>Blue House</div>
+            </div>
+            <button class="hamburger" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="search-bar-container" id="searchBarContainer" style="display:none;">
+            <div class="search-bar-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                <button class="search-close-btn" id="searchCloseBtn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <span class="close-btn" id="closeSidebar"><i class="fas fa-times"></i></span>
+        <ul>
+            <li><a href="tel:+992800066120" id="contactLink"><i class="fas fa-phone-alt"></i> Contact Us</a></li>
+            <li><button id="darkModeToggle"><i class="fas fa-moon"></i> Dark Mode</button></li>
+            <li><a href="#" id="cartViewLink"><i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)</a></li>
+            <li><a href="#" id="wishlistViewLink"><i class="fas fa-heart"></i> Wishlist (<span id="wishlistCount">0</span>)</a></li>
+            <li><a href="#" id="infoViewLink"><i class="fas fa-info-circle"></i> About Us</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <main class="container">
+        <div id="home-view" class="view active-view">
+            <div class="category-bar" id="categoryBar"></div>
+            <h2 class="section-title" id="categoryTitle">All Products & Posts</h2>
+            <div id="productGrid" class="product-grid"></div>
+            <div id="noProducts" style="display: none;">No products found in this category.</div>
+        </div>
+
+        <div id="cart-view" class="view">
+            <h2><i class="fas fa-shopping-cart"></i> Your Cart</h2>
+            <div id="cartItemsContainer"></div>
+            <div id="cartTotal" class="total"></div>
+            <div class="checkout-form" id="checkoutForm" style="display:none;">
+                <h3>Checkout</h3>
+                <div class="form-group"><label>Full Name</label><input type="text" id="customerName" placeholder="e.g., Ali Rahimov"></div>
+                <div class="form-group"><label>Phone</label><input type="text" id="customerPhone" placeholder="+992 900 000 000"></div>
+                <div class="form-group"><label>Address</label><input type="text" id="customerAddress" placeholder="Full address"></div>
+                <button class="btn btn-success" id="placeOrderBtn"><span>Place Order</span></button>
+            </div>
+            <a href="#" class="back-link" id="backToHomeFromCart"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
+        </div>
+
+        <div id="wishlist-view" class="view">
+            <h2><i class="fas fa-heart"></i> Your Wishlist</h2>
+            <div id="wishlistItemsContainer"></div>
+            <a href="#" class="back-link" id="backToHomeFromWishlist"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
+        </div>
+
+        <div id="info-view" class="view">
+            <h2><i class="fas fa-info-circle"></i> About Us</h2>
+            <p style="margin:20px 0;">Welcome to our store! We offer the best products at affordable prices.</p>
+            <p>Once you place an order, we will contact you as soon as possible.</p>
+            <p>We deliver to all cities in Tajikistan.</p>
+            <p>Enjoy your shopping!</p>
+            <a href="#" class="back-link" id="backToHomeFromInfo"><i class="fas fa-arrow-left"></i> Back to Store</a>
+        </div>
+    </main>
+
+    <footer class="main-footer" id="mainFooter">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3><i class="fas fa-store"></i> Blue House</h3>
+                <p>Best products, fair prices.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/afgmadara201" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/992800066120" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://wa.me/992800066120" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:+992800066120">+992800066120</a></p>
+                <p><a href="https://www.instagram.com/afgmadara201" target="_blank"><i class="fab fa-instagram"></i> @afgmadara201</a></p>
+                <p><i class="fas fa-envelope"></i> cpuhudai@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <p><a href="#" id="footerInfoLink"><i class="fas fa-info-circle"></i> About</a></p>
+                <p><a href="tel:+992800066120" id="footerContactLink"><i class="fas fa-phone-alt"></i> Contact</a></p>
+                <p><a href="#" id="footerHomeLink"><i class="fas fa-home"></i> Home</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Blue House. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
